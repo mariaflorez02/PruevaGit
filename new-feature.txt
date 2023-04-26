@@ -1,4 +1,7 @@
+
 Prueva de admision 
 
-modificando archivo en rama master despues de fusion
+modificacion diferente 
+para hacer un comit con master 
+y resolver conflictos
 
