@@ -1,3 +1,4 @@
 ﻿**prueba de admisión**
-
-Ejemplo de readme.md 
+ 
+ se subio el repositorio local a un repositorio remoto y se cambio el readme.md 
+ 
