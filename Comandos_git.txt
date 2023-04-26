@@ -1,0 +1,160 @@
+C:\Users\LENOVO>git config --list --global
+user.name=mariaflorez02
+user.email=1523maryva06@gmail.com
+github.user=mariaflorez02
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git
+$ git init
+Initialized empty Git repository in C:/Users/LENOVO/Documents/Git/.git/
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git add Readme.md
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git commit "añadiendo un readme al repositorio"
+error: pathspec 'añadiendo un readme al repositorio' did not match any file(s) known to git
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git commit -m "añadiendo un readme al repositorio"
+[master (root-commit) 24f95af] añadiendo un readme al repositorio
+ 1 file changed, 3 insertions(+)
+ create mode 100644 Readme.md
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git add new-feature.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git commit -m "añadiendo un .txt "
+[feature 34b6dd8] añadiendo un .txt
+ 1 file changed, 3 insertions(+)
+ create mode 100644 new-feature.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git merge feature
+Updating 24f95af..34b6dd8
+Fast-forward
+ new-feature.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 new-feature.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git add .
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git commit -m "añadiendo cambios al archivo feture.txt "
+[master 246f848] añadiendo cambios al archivo feture.txt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git add new-feature.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git commit -m "añadiendo archivo feature con cambios"
+[feature f3e67a7] añadiendo archivo feature con cambios
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git merge feature
+Auto-merging new-feature.txt
+CONFLICT (content): Merge conflict in new-feature.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master|MERGING)
+$ git status
+On branch master
+      1 [sig] bash 1920! sigpacket::process: Suppressing signal 18 to win32 process (pid 8568)
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   new-feature.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master|MERGING)
+$ git add new-feature.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master|MERGING)
+$ git commit -m "merged and resolved the conflict in new-feature.txt"
+[master d578261] merged and resolved the conflict in new-feature.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git remote add origin https://github.com/mariaflorez02/PruevaGit.git
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git push -u origin master
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (15/15), 1.57 KiB | 401.00 KiB/s, done.
+Total 15 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/mariaflorez02/PruevaGit.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git add .gitignore.txt
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git add .
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (feature)
+$ git commit -m "añadiendo .git ignore y repositorio clonado de git hub"
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git push 
+
+
+---------------------- clonacion repositorio de github ---------------------------------------------------------------------------------------
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git (master)
+$ git clone https://github.com/modal-labs/quillman.git
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git/quillman (main)
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git/quillman (main)
+$ git log
+commit 16d22bc96f4719d3dd395a0adaa96b6b72489e36 (HEAD -> main, origin/main, origin/HEAD)
+Author: Akshat Bubna <akshatb42@gmail.com>
+Date:   Sat Apr 22 16:23:22 2023 -0400
+
+    Update README.md
+
+commit 7d131839cf26462c7e1110a05272d75387998bdf
+Author: Akshat Bubna <akshatb42@gmail.com>
+Date:   Sat Apr 22 16:19:18 2023 -0400
+
+    Update README.md
+
+commit fbb17513ca8671ead369f48f181c2dc0dc6ab404
+Author: Akshat Bubna <akshatb42@gmail.com>
+Date:   Wed Apr 19 11:07:56 2023 -0400
+
+    Initial commit
+
+LENOVO@DESKTOP-6CTSCQJ MINGW64 ~/Documents/Git/quillman (main)
+$
+
+
