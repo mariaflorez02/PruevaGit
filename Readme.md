@@ -3,7 +3,7 @@
  se subio el repositorio local a un repositorio remoto y se cambio el readme.md 
 
  ## **Valentina Florez**
-![foto](https://raw.githubusercontent.com/mariaflorez02/PruebaGit/Valentina/Valentina_Florez/foto.jpg)
+![foto](![https://raw.githubusercontent.com/mariaflorez02/PruebaGit/Valentina/Valentina_Florez/foto.jpg])
 
 _Gramalote- Norte de santander, Colombia_
 
